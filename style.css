@@ -11,6 +11,71 @@ Tags: one-column, two-columns, three-columns, right-sidebar, grid-layout, flexib
 Text Domain: kale-child
 */
 
-.header-logo-text {
 
+/* 
+
+  *** TABLE OF CONTENTS ***
+
+
+  * Navigation
+  * Homepage
+
+
+*/
+
+
+
+
+/* NAVIGAGION */
+
+.navbar-nav {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 991px) {
+
+  .navbar-nav {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: 'Lato', sans-serif;
+    color: #545454;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    float: none;
+    display: inline-block !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.dropdown-menu.main_search {
+  width: 130px;
+  left: -30px;
+}
+
+.dropdown-menu.main_search input {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  padding: 12px;
+}
+
+.dropdown-menu.main_search input:focus {
+  outline: 2px solid #1e99ce;
+}
+
+
+/* HOMEPAGE */
+
+.icon-user,
+.icon-clock,
+.icon-difficulty {
+  color: #333;
+  height: 12px;
 }
