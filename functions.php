@@ -1,6 +1,7 @@
 <?php
 
 function theme_enqueue_styles() {
+
   wp_enqueue_script('main-js', get_theme_file_uri('./js/scripts.js'), NULL, microtime(), true);
 
   $parent_style = 'parent-style';
@@ -10,6 +11,8 @@ function theme_enqueue_styles() {
       get_stylesheet_directory_uri() . '/style.css',
       array( $parent_style )
   );
+
+
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' ); 
