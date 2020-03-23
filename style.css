@@ -72,6 +72,13 @@ Text Domain: kale-child
 
 
 /* HOMEPAGE */
+.entry-custom-meta {
+  font-size: 12px;
+}
+
+.entry-custom-meta span:not(:last-of-type) {
+  margin-right: 8px;
+}
 
 .icon-user,
 .icon-clock,
