@@ -1,5 +1,4 @@
 const difficultyLevelText = document.querySelectorAll('.difficulty-level__text');
-const difficultyLevelIcon = document.querySelectorAll('.icon-difficulty__path');
 
 
 /// Difficulty level ///
