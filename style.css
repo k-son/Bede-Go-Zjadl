@@ -16,14 +16,20 @@ Text Domain: kale-child
 
   *** TABLE OF CONTENTS ***
 
-
+  * Header
   * Navigation
   * Homepage
-
+  * Tags
 
 */
 
 
+
+/* HEADER */
+
+.header .tagline p {
+  font-size: 24px;
+}
 
 
 /* NAVIGAGION */
@@ -34,24 +40,22 @@ Text Domain: kale-child
   justify-content: center;
 }
 
-@media only screen and (max-width: 991px) {
+.navbar-default {
+  background-color: #219121;
+}
 
-  .navbar-nav {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: 'Lato', sans-serif;
-    color: #545454;
-    font-size: 13px;
-    line-height: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    padding-left: 0;
-    list-style: none;
-    margin: 0;
-    float: none;
-    display: inline-block !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.navbar-default .navbar-nav > li > a {
+  font-size: 13px;
+  color: white;
+}
+
+.dropdown-menu {
+  background-color: #e7ffe7;
+}
+
+.dropdown-menu > li.menu-item > a {
+  font-size: 13px;
+  padding: 10px 20px;
 }
 
 .dropdown-menu.main_search {
@@ -67,11 +71,80 @@ Text Domain: kale-child
 }
 
 .dropdown-menu.main_search input:focus {
-  outline: 2px solid #1e99ce;
+  outline: 2px solid #46ce46;
+}
+
+/* hamburger button */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #219121;
+}
+
+@media only screen and (max-width: 991px) {
+
+  .navbar-nav {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: 'Lato', sans-serif;
+    color: #545454;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    float: none;
+    display: inline-block !important;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .dropdown-menu.main_search form input {
+    max-width: 70%;
+    height: 46px;
+    transform: translateY(-5px);
+  }
+
+  .navbar-nav > li.search {
+    border: none;
+  }
+
+  .fa.fa-search {
+    font-size: 24px;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu  {
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-left: 30px;
+  }
+  
+  .navbar-default .navbar-nav .open .dropdown-menu > li {
+    width: 100%;
+    background-color: #e7ffe7;
+  }
 }
 
 
 /* HOMEPAGE */
+
+.entry-thumb img {
+  border-radius: 3px;
+}
+
 .entry-custom-meta {
   font-size: 12px;
 }
@@ -87,4 +160,29 @@ Text Domain: kale-child
   color: #333;
   fill: #333;
   height: 12px;
+}
+
+.entry-summary {
+  color: #555;
+}
+
+
+
+/* TAGS */
+
+.footer-widgets {
+  margin-top: 40px;
+}
+
+.footer-widgets .widget-title {
+  margin-bottom: 30px;
+}
+
+.tagcloud a {
+  font-size:  14px !important;
+  color: #fff;;
+  background-color: #219121;
+  border-radius: 2px;
+  padding: 8px 12px;
+  line-height: 2.6;
 }
