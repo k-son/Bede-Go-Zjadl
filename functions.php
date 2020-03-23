@@ -1,6 +1,7 @@
 <?php
 
 function theme_enqueue_styles() {
+  wp_enqueue_script('main-js', get_theme_file_uri('./js/scripts.js'), NULL, microtime(), true);
 
   $parent_style = 'parent-style';
 

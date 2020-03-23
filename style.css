@@ -75,7 +75,9 @@ Text Domain: kale-child
 
 .icon-user,
 .icon-clock,
-.icon-difficulty {
+.icon-difficulty,
+.icon-difficulty__path {
   color: #333;
+  fill: #333;
   height: 12px;
 }

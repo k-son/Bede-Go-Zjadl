@@ -48,10 +48,11 @@ if(!isset($kale_frontpage_large_post)) $kale_frontpage_large_post = 'no';
                             <g id="Two-Tone-/-Device-/-signal_cellular_alt" transform="translate(238.000000, 186.000000)">
                                 <g>
                                     <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
-                                    <path d="M17,4 L20,4 L20,20 L17,20 L17,4 Z M5,14 L8,14 L8,20 L5,20 L5,14 Z M11,9 L14,9 L14,20 L11,20 L11,9 Z" id="🔹-Primary-Color" fill="#1D1D1D"></path>
+                                    <path class="icon-difficulty__path" d="M17,4 L20,4 L20,20 L17,20 L17,4 Z M5,14 L8,14 L8,20 L5,20 L5,14 Z M11,9 L14,9 L14,20 L11,20 L11,9 Z"></path>
                                 </g></g></g></g></g>
             </svg>
-            <?php echo get_field('difficulty_level'); ?></span>
+            <span class="difficulty-level__text"><?php echo get_field('difficulty_level'); ?></span>
+          </span>
         </div>
         
         <?php if(get_the_title() != '') { ?>
