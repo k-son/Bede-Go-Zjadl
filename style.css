@@ -20,7 +20,7 @@ Text Domain: kale-child
   * Navigation
   * Homepage
   * Random links
-  * Tags
+  * Tags & categories footer widget
 
 
 */
@@ -200,7 +200,7 @@ Text Domain: kale-child
 }
 
 
-/* TAGS */
+/* TAGS & CATEGORIES FOOTER WIDGET */
 
 .footer-widgets {
   margin-top: 40px;
@@ -210,11 +210,24 @@ Text Domain: kale-child
   margin-bottom: 30px;
 }
 
-.tagcloud a {
+.footer-widgets .tagcloud a {
   font-size:  14px !important;
   color: #fff;;
   background-color: #219121;
   border-radius: 2px;
   padding: 8px 12px;
   line-height: 2.6;
+}
+
+.footer-widgets .widget_categories .widget-title {
+  margin-top: 60px;
+}
+
+.footer-widgets .widget_categories li a {
+  font-size: 14px;
+  color: #005400;
+}
+
+.footer-widgets .widget_categories li {
+  color: #005400;
 }
