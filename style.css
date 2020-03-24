@@ -13,8 +13,10 @@ Text Domain: kale-child
 
 
 /* 
-
+  -------------------------
   *** TABLE OF CONTENTS ***
+  -------------------------
+  * Base
 
   * Header
   * Navigation
@@ -24,10 +26,19 @@ Text Domain: kale-child
   * Random links
 
   *** Single post page ***
+  * Date
+  * Title
+  * Single post text
+  * Ingredients list
+  * Meta: author, categories, tags
+  * Comments
 
 */
 
-
+/* BASE */
+::selection {
+  background-color: #e7ffe7;
+}
 
 /* HEADER */
 
@@ -154,7 +165,7 @@ Text Domain: kale-child
 }
 
 .footer-widgets .tagcloud {
-  width: 66%;
+  width: 100%;
 }
 
 .footer-widgets .tagcloud a {
@@ -245,29 +256,149 @@ Text Domain: kale-child
 /*  - SINGLE POST PAGE -  */
 /* * * * * * * * * * * * */
 
+
+/* DATE */
+
+.entry-header .entry-date {
+  font-size: 12px;
+  margin-left: 15px;
+}
+
+/* TITLE */
+
+ h1.entry-title {
+  margin-left: 15px;
+}
+
+/* SINGLE POST TEXT */
+
+.single-content {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+
+/* INGREDIENTS LIST */
+
 .ingredients-list {
-  border: 1px solid #005400;
-  max-width: 500px;
   min-height: 410px;
   padding: 24px 24px 24px 44px;
-  font-size: 16px;
-
+  font-family: Caveat, cursive;
+  font-size: 20px;
   line-height: 24px;
-
   background-color: #fff;
   background-image:
-  linear-gradient(90deg, transparent 32px, #abd4b1 32px, #abd4b1 34px, transparent 34px),
+  linear-gradient(90deg, transparent 32px, #c2ebc9 32px, #c2ebc9 34px, transparent 34px),
   linear-gradient(#eee .1em, transparent .1em);
   background-size: 100% 24px;
+  border: 2px solid #219121;
+  border-radius: 3px;
 }
 
-.ingredients-list p {
-  margin-bottom: 24px;
+.ingredients-list::after {
+  display: block;
+  position: absolute;
+  top: 27px;
+  left: 60px;
+  content: "składniki:";
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #333;
+  padding: 1px 3px;
 }
 
-/* Meta author, categories, tags */
+.ingredients-list p:not(:last-of-type) {
+  margin-bottom: 25px;
+}
 
-.entry-meta {
+.ingredients-list p:first-of-type {
+  margin-top: 48px;
+}
+
+@media only screen and (max-width: 1199px) {
+  
+  .ingredients-list {
+    min-height: 335px;
+  }
+}
+
+
+/* META: AUTHOR, CAGTEGORIES, TAGS */
+
+.entry-footer .entry-meta {
+  width: 100%;
   font-size: 14px;
-  margin: 25px 15px;
+  margin: 10px 15px 0;
+}
+
+.entry-footer .entry-meta > div:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.entry-footer .entry-meta a:hover {
+  color: #219121;
+}
+
+
+/* COMMENTS */
+
+.comment-list .comment-content {
+  font-size: 16px;
+}
+
+.comment-author,
+.comment-reply-link {
+  font-size: 13px;
+  color: #005400;
+}
+
+.comment-reply-link:hover {
+  color: #219121;
+}
+
+.comment-list .comment-metadata time {
+  font-size: 12px;
+}
+
+.comment-list .comment-metadata time:hover {
+  color: #219121;
+}
+
+.comment-respond .comment-notes  {
+  font-size: 13px;
+}
+
+.comment-form label {
+  font-size: 13px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  font-size: 16px;
+  color: #555;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #219121;
+}
+
+.form-group-cookie input {
+  transform: translateY(-3px);
+}
+
+.form-group-cookie label {
+  margin-left: 10px;
+}
+
+.comment-form .form-submit input {
+  letter-spacing: 2px;
+  background-color: #005400;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.comment-form .form-submit input:hover {
+  background-color: #219121;
 }
