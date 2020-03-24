@@ -35,10 +35,12 @@ Text Domain: kale-child
 
 */
 
+
 /* BASE */
 ::selection {
   background-color: #e7ffe7;
 }
+
 
 /* HEADER */
 
@@ -62,6 +64,10 @@ Text Domain: kale-child
 .navbar-default .navbar-nav > li > a {
   font-size: 13px;
   color: white;
+}
+
+.fa.fa-search {
+  font-size: 18px;
 }
 
 .dropdown-menu {
@@ -121,6 +127,15 @@ Text Domain: kale-child
 
 @media only screen and (max-width: 767px) {
 
+  .navbar-nav {
+    margin-top: 20px;
+  }
+
+
+  .navbar-default .navbar-nav > li > a {
+    text-align: right;
+  }
+
   .dropdown-menu.main_search form input {
     max-width: 70%;
     height: 46px;
@@ -129,6 +144,7 @@ Text Domain: kale-child
 
   .navbar-nav > li.search {
     border: none;
+    margin-bottom: 70px;
   }
 
   .fa.fa-search {
@@ -138,18 +154,17 @@ Text Domain: kale-child
   .navbar-default .navbar-nav .open .dropdown-menu  {
     position: absolute;
     left: 0;
-    right: 0;
     min-width: unset;
     max-width: 100%;
     width: 100%;
     margin: auto;
-    text-align: center;
-    margin-left: 30px;
+    text-align: left;
   }
   
   .navbar-default .navbar-nav .open .dropdown-menu > li {
     width: 100%;
     background-color: #e7ffe7;
+    border-bottom: 1px solid #219121;
   }
 }
 
@@ -177,6 +192,10 @@ Text Domain: kale-child
   line-height: 2.6;
 }
 
+.footer-widgets .tagcloud a:hover {
+  background-color: #46ce46;
+}
+
 .footer-widgets .widget_categories .widget-title {
   margin-top: 60px;
 }
@@ -188,6 +207,10 @@ Text Domain: kale-child
 
 .footer-widgets .widget_categories li {
   color: #005400;
+}
+
+.footer-widgets .widget_categories li a:hover {
+  color: #46ce46;
 }
 
 
@@ -214,6 +237,12 @@ Text Domain: kale-child
   color: #333;
   fill: #333;
   height: 12px;
+}
+
+.entry-title a:hover,
+.entry-category a:hover,
+.entry-comments a:hover {
+  color: #219121;
 }
 
 .entry-summary {
@@ -304,7 +333,7 @@ Text Domain: kale-child
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #333;
   padding: 1px 3px;
 }
 
@@ -347,7 +376,18 @@ Text Domain: kale-child
   font-size: 16px;
 }
 
-.comment-author,
+.comment-list .children {
+  margin: 0 0 0 5%;
+}
+
+.comment-list .children > li {
+  margin-top: 10px;
+}
+
+.comment-author {
+  font-size: 13px;
+}
+
 .comment-reply-link {
   font-size: 13px;
   color: #005400;
@@ -357,16 +397,26 @@ Text Domain: kale-child
   color: #219121;
 }
 
-.comment-list .comment-metadata time {
+.comment-list .comment-metadata time,
+.comment-list .comment-metadata .comment-edit-link {
   font-size: 12px;
 }
 
-.comment-list .comment-metadata time:hover {
+.comment-list .comment-metadata time:hover,
+.comment-list .comment-metadata .comment-edit-link:hover {
   color: #219121;
+}
+
+.comment-list .comment-metadata time {
+  margin-right: 5px;
 }
 
 .comment-respond .comment-notes  {
   font-size: 13px;
+}
+
+.comment-form .logged-in-as a {
+  color: #005400;
 }
 
 .comment-form label {
@@ -396,9 +446,33 @@ Text Domain: kale-child
   letter-spacing: 2px;
   background-color: #005400;
   color: #fff;
+  border: 2px solid #219121;
   border-radius: 3px;
 }
 
 .comment-form .form-submit input:hover {
   background-color: #219121;
+}
+
+
+
+
+.navbar-default .navbar-nav > .current_page_item > a,
+.navbar-default .navbar-nav > .current_page_item > a:focus, 
+.navbar-default .navbar-nav > .current_page_item > a:hover,
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:focus, 
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-nav a:hover {
+  background-color: #46ce46 !important;
+  color:#000 !important;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover,
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: transparent !important;
+  color:#000 !important;
+  font-weight: 500;
 }

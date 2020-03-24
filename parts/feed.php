@@ -39,8 +39,8 @@ $kale_sidebar_size = kale_get_option('kale_sidebar_size');
         </div>
         <?php if(get_next_posts_link() || get_previous_posts_link()) { ?>
         <div class="pagination-blog-feed">
-            <?php if( get_next_posts_link() ) { ?><div class="previous_posts"><?php next_posts_link( esc_html__('Previous Posts', 'kale') ); ?></div><?php } ?>
-            <?php if( get_previous_posts_link() ) { ?><div class="next_posts"><?php previous_posts_link( esc_html__('Next Posts', 'kale') ); ?></div><?php } ?>
+            <?php if( get_next_posts_link() ) { ?><div class="previous_posts"><?php next_posts_link( esc_html__('Starsze wpisy', 'kale') ); ?></div><?php } ?>
+            <?php if( get_previous_posts_link() ) { ?><div class="next_posts"><?php previous_posts_link( esc_html__('Nowsze wpisy', 'kale') ); ?></div><?php } ?>
         </div>
         <?php } ?>
     </div>

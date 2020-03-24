@@ -1,7 +1,5 @@
 const difficultyLevelText = document.querySelectorAll('.difficulty-level__text');
 
-const toPreviousPostsLink = document.querySelectorAll('.previous_posts a');
-const toNextPostsLink = document.querySelectorAll('.next_posts a');
 const blogFeedHeading = document.querySelector('.blog-feed h2');
 
 
@@ -17,6 +15,6 @@ difficultyLevelText.forEach(el => {
   }
 });
 
+
+/// Homepage subtitle
 blogFeedHeading.innerText = "NAJNOWSZE WPISY";
-toPreviousPostsLink.forEach(el => el.innerText = "STARSZE WPISY");
-toNextPostsLink.forEach(el => el.innerText = "NOWSZE WPISY");
