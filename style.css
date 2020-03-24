@@ -18,10 +18,12 @@ Text Domain: kale-child
 
   * Header
   * Navigation
-  * Homepage
-  * Random links
   * Tags & categories footer widget
 
+  *** Homepage ***
+  * Random links
+
+  *** Single post page ***
 
 */
 
@@ -141,7 +143,46 @@ Text Domain: kale-child
 }
 
 
-/* HOMEPAGE */
+/* TAGS & CATEGORIES FOOTER WIDGET */
+
+.footer-widgets {
+  margin-top: 40px;
+}
+
+.footer-widgets .widget-title {
+  margin-bottom: 30px;
+}
+
+.footer-widgets .tagcloud {
+  width: 66%;
+}
+
+.footer-widgets .tagcloud a {
+  font-size:  14px !important;
+  color: #fff;;
+  background-color: #219121;
+  border-radius: 2px;
+  padding: 8px 12px;
+  line-height: 2.6;
+}
+
+.footer-widgets .widget_categories .widget-title {
+  margin-top: 60px;
+}
+
+.footer-widgets .widget_categories li a {
+  font-size: 14px;
+  color: #005400;
+}
+
+.footer-widgets .widget_categories li {
+  color: #005400;
+}
+
+
+/* * * * * * * * * */
+/*  - HOMEPAGE -  */
+/* * * * * * * * */
 
 .entry-thumb img {
   border-radius: 3px;
@@ -200,34 +241,33 @@ Text Domain: kale-child
 }
 
 
-/* TAGS & CATEGORIES FOOTER WIDGET */
+/* * * * * * * * * * * * * */
+/*  - SINGLE POST PAGE -  */
+/* * * * * * * * * * * * */
 
-.footer-widgets {
-  margin-top: 40px;
+.ingredients-list {
+  border: 1px solid #005400;
+  max-width: 500px;
+  min-height: 410px;
+  padding: 24px 24px 24px 44px;
+  font-size: 16px;
+
+  line-height: 24px;
+
+  background-color: #fff;
+  background-image:
+  linear-gradient(90deg, transparent 32px, #abd4b1 32px, #abd4b1 34px, transparent 34px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 24px;
 }
 
-.footer-widgets .widget-title {
-  margin-bottom: 30px;
+.ingredients-list p {
+  margin-bottom: 24px;
 }
 
-.footer-widgets .tagcloud a {
-  font-size:  14px !important;
-  color: #fff;;
-  background-color: #219121;
-  border-radius: 2px;
-  padding: 8px 12px;
-  line-height: 2.6;
-}
+/* Meta author, categories, tags */
 
-.footer-widgets .widget_categories .widget-title {
-  margin-top: 60px;
-}
-
-.footer-widgets .widget_categories li a {
+.entry-meta {
   font-size: 14px;
-  color: #005400;
-}
-
-.footer-widgets .widget_categories li {
-  color: #005400;
+  margin: 25px 15px;
 }
