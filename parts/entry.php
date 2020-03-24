@@ -84,7 +84,7 @@ if(!isset($kale_frontpage_large_post)) $kale_frontpage_large_post = 'no';
             <?php 
             $kale_temp = array();
             if($kale_blog_feed_category_show == 1)  $kale_temp[] = '<div class="entry-category">' . get_the_category_list(', '). '</div>';
-            if($kale_blog_feed_author_show == 1)    $kale_temp[] = '<div class="entry-author">' . __('by ', 'kale') 
+            if($kale_blog_feed_author_show == 1)    $kale_temp[] = '<div class="entry-author">' . __('od ', 'kale') 
 														. '<span class="vcard author"><span class="fn">' 
 														. get_the_author() 
 														. '</span></span>' 
@@ -92,7 +92,7 @@ if(!isset($kale_frontpage_large_post)) $kale_frontpage_large_post = 'no';
             if($kale_blog_feed_date_show == 1 && $kale_entry == 'vertical')     
                                                     $kale_temp[] = '<br /><div class="entry-date date updated">' . get_the_date() . '</div>';
             if ( ! post_password_required() && comments_open() && $kale_blog_feed_comments_show == 1)  
-                                                    $kale_temp[] = '<div class="entry-comments"><a href="'.esc_url(get_comments_link()).'">'. sprintf( _nx( '%1$s Comment', '%1$s Comments', get_comments_number(), 'comments title', 'kale' ), number_format_i18n( get_comments_number() ) ) .'</a></div>';
+                                                    $kale_temp[] = '<div class="entry-comments"><a href="'.esc_url(get_comments_link()).'">'. get_comments_number() . ' <svg class="icon-comments" height="1792" viewBox="0 0 1792 1792" width="1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 896q0 174-120 321.5t-326 233-450 85.5q-70 0-145-8-198 175-460 242-49 14-114 22-17 2-30.5-9t-17.5-29v-1q-3-4-.5-12t2-10 4.5-9.5l6-9 7-8.5 8-9q7-8 31-34.5t34.5-38 31-39.5 32.5-51 27-59 26-76q-157-89-247.5-220t-90.5-281q0-130 71-248.5t191-204.5 286-136.5 348-50.5q244 0 450 85.5t326 233 120 321.5z"/></svg>' . '</a></div>';
             $kale_str = '';
             if($kale_temp) $kale_str = implode('<span class="sep"> - </span>', $kale_temp);
             echo $kale_str;
