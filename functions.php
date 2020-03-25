@@ -53,7 +53,7 @@ function kale_get_nav_search_item(){
       <a href="javascript:;" id="toggle-main_search" data-toggle="dropdown"><i class="fa fa-search"></i></a>
       <div class="dropdown-menu main_search">
           <form class="search-form" name="main_search" method="get" action="'.esc_url(home_url( '/' )).'">
-              <input class="search-form__text-input" type="text" name="s" class="form-control" placeholder="'. esc_attr(__('Type here','kale')).'" />
+              <input autocomplete="off" type="text" name="s" class="search-form__text-input" placeholder="'. esc_attr(__('Wpisz szukane hasło','kale')).'" />
               <input class="search-form__submit-btn" type="submit" value="Szukaj">
           </form>
       </div>
