@@ -25,3 +25,37 @@ function bedegozjadl_files() {
 
 add_action('wp_enqueue_scripts', 'bedegozjadl_files');
 */
+
+
+#get_the_archive_title
+/* Code from the parent theme
+ Customization: "Search results" changed to "Szukana fraza" */
+function kale_archive_title( $title ) {
+  if( is_home() && get_option('page_for_posts') ) {
+      $title = get_page( get_option('page_for_posts') )->post_title;
+  }
+  else if( is_home() ) {
+      $title = kale_get_option('kale_blog_feed_label');
+      $title = esc_html($title);
+  }
+  else if ( is_search() ) {
+      $title = esc_html__('Szukana fraza: ', 'kale') . get_search_query();
+  }
+  return $title;
+}
+add_filter( 'get_the_archive_title', 'kale_archive_title' );
+
+
+/* Code from the parent theme
+ Customization: Add submit button and classes to form element */
+function kale_get_nav_search_item(){
+  return '<li class="search">
+      <a href="javascript:;" id="toggle-main_search" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+      <div class="dropdown-menu main_search">
+          <form class="search-form" name="main_search" method="get" action="'.esc_url(home_url( '/' )).'">
+              <input class="search-form__text-input" type="text" name="s" class="form-control" placeholder="'. esc_attr(__('Type here','kale')).'" />
+              <input class="search-form__submit-btn" type="submit" value="Szukaj">
+          </form>
+      </div>
+  </li>';
+}
