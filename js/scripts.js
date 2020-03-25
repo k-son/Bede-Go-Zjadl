@@ -17,4 +17,6 @@ difficultyLevelText.forEach(el => {
 
 
 /// Homepage subtitle
-blogFeedHeading.innerText = "NAJNOWSZE WPISY";
+if (blogFeedHeading.innerText == "RECENT POSTS") {
+  blogFeedHeading.innerText = "NAJNOWSZE WPISY";
+}
