@@ -1,7 +1,7 @@
 /*
 Theme Name: Bede Go Zjadl
 Theme URI: https://bedegozjadl.k-son.eu/kale
-Description: Kale child theme, customize to suit my needs
+Description: Kale child theme, customized to suit my needs
 Author: Jacek Jarczok
 Author URI: https://k-son.eu/
 Template: Kale
@@ -20,6 +20,7 @@ Text Domain: kale-child
 
   * Header
   * Navigation
+  * Search form
   * Tags & categories footer widget
 
   *** Homepage ***
@@ -103,6 +104,7 @@ Text Domain: kale-child
 .navbar-default .navbar-toggle:hover .icon-bar {
   background-color: #219121;
 }
+/* end of hamburger button */
 
 @media only screen and (max-width: 991px) {
 
@@ -186,6 +188,109 @@ Text Domain: kale-child
   background-color: transparent !important;
   color:#000 !important;
   font-weight: 500;
+}
+
+
+/* SEARCH FORM */
+
+.dropdown-menu.main_search {
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.85);
+  z-index: 999;
+}
+
+.main_search .search-form {
+  display: flex;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 33%;
+  width: 50%;
+  max-width: 700px;
+  min-width: 500px;
+  height: 60px;
+  border-radius: 3px;
+  border: 3px solid #219121;
+}
+
+.search-form__text-input {
+  width: 100%;
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 3px !important;
+}
+
+.search-form__submit-btn {
+  min-width: 100px !important;
+  height: 100% !important;
+  color: #fff !important;
+  background-color: #005400 !important;
+  border: 2px solid transparent !important;
+  letter-spacing: 2px;
+}
+
+.search-form__submit-btn:hover {
+  background-color: #219121 !important;
+  border: 2px solid #219121 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .dropdown-menu.main_search {
+    position: initial;
+    min-width: initial;
+    min-height: initial;
+    top: initial;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    background-color: initial;
+    z-index: initial;
+  }
+  
+  .main_search .search-form {
+    display: initial;
+    position: initial;
+    left: initial;
+    top: initial;
+    width: initial;
+    background-color: initial;
+  }
+
+  .search-form__text-input {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    transform: translateX(-3px) !important;
+    transform: translateY(-5px) !important;
+    width: calc(100% - 170px) !important;
+  }
+
+  .search-form__submit-btn {
+    height: 46px !important;
+    width: 80px !important;
+    transform: translateY(-5px) !important;
+    border: 2px solid #005400 !important;
+  }
+
+  .search-form__submit-btn:hover {
+    background-color: #46ce46 !important;
+    border: 2px solid #46ce46 !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .search-form__text-input {
+    width: 100% !important;
+  }
+
+  .search-form__submit-btn {
+    transform: translate(2px, -1px) !important;
+  }
 }
 
 
@@ -301,10 +406,10 @@ Text Domain: kale-child
 }
 
 
+
 /* * * * * * * * * * * * * */
 /*  - SINGLE POST PAGE -  */
 /* * * * * * * * * * * * */
-
 
 /* DATE */
 
@@ -473,3 +578,4 @@ Text Domain: kale-child
 .comment-form .form-submit input:hover {
   background-color: #219121;
 }
+
