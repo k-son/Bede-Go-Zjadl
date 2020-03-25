@@ -35,7 +35,7 @@ $kale_sidebar_size = kale_get_option('kale_sidebar_size');
                 }
                  $kale_flag = true;
             endwhile;
-        } else { ?><div class="blog-feed-empty"><p><?php esc_html_e('No posts found.', 'kale'); ?></p></div><?php } ?>
+        } else { ?><div class="blog-feed-empty"><p><?php esc_html_e('Nie znaleziono pasujących wpisów.', 'kale'); ?></p></div><?php } ?>
         </div>
         <?php if(get_next_posts_link() || get_previous_posts_link()) { ?>
         <div class="pagination-blog-feed">
