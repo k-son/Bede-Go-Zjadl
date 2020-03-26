@@ -1,5 +1,4 @@
 const difficultyLevelText = document.querySelectorAll('.difficulty-level__text');
-
 const blogFeedHeading = document.querySelector('.blog-feed h2');
 
 
@@ -20,3 +19,9 @@ difficultyLevelText.forEach(el => {
 if (blogFeedHeading.innerText == "RECENT POSTS") {
   blogFeedHeading.innerText = "NAJNOWSZE WPISY";
 }
+
+
+/// Tooltips
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip({delay: {show: 100, hide: 100}});
+});
