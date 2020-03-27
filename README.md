@@ -1,5 +1,5 @@
 # Bede-Go-Zjadl
-WordPress child theme for Kale theme.
+WordPress child theme for [Kale theme](https://www.lyrathemes.com/kale/).
 
 ## Customizations
 - removed sidebars from homepage and single post pages
