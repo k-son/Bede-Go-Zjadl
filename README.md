@@ -1,7 +1,7 @@
 # Bede-Go-Zjadl
 WordPress child theme for Kale theme.
 
-##Customizations
+## Customizations
 - removed sidebars from homepage and single post pages
 - removed banner from homepage
 - main menu with categories
@@ -12,5 +12,5 @@ WordPress child theme for Kale theme.
 - translations to polish
 - new styles for most elements
 
-##Purpose
+## Purpose
 For my family personal use as a base of our recipes.
