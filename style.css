@@ -341,6 +341,11 @@ Text Domain: kale-child
 
 
 /* FOOTER */
+
+.footer a {
+  color: #333;
+}
+
 .footer a:hover {
   color: #219121;
 }
