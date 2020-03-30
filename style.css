@@ -316,6 +316,7 @@ Text Domain: kale-child
   border-radius: 2px;
   padding: 8px 12px;
   line-height: 2.6;
+  white-space: nowrap;
 }
 
 .footer-widgets .tagcloud a:hover {
