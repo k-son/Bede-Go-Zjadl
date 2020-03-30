@@ -4,7 +4,7 @@ WordPress child theme for [Kale theme](https://www.lyrathemes.com/kale/).
 ## Customizations
 - removed sidebars from homepage and single post pages
 - removed banner from homepage
-- main menu with categories
+- categories in main menu
 - tweaked search form styles
 - 3 column blog layout with equal size entries (for middle size screens and larger), 1 column for smaller ones
 - added custom fields: person count, preparation time, difficulty level, ingredients list
