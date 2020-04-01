@@ -22,6 +22,7 @@ Text Domain: kale-child
   * Navigation
   * Search form
   * Tags & categories footer widget
+  * Footer
 
   *** Homepage ***
   * Random links
@@ -315,6 +316,7 @@ Text Domain: kale-child
   border-radius: 2px;
   padding: 8px 12px;
   line-height: 2.6;
+  white-space: nowrap;
 }
 
 .footer-widgets .tagcloud a:hover {
@@ -337,6 +339,23 @@ Text Domain: kale-child
 .footer-widgets .widget_categories li a:hover {
   color: #46ce46;
 }
+
+
+/* FOOTER */
+
+.footer a {
+  color: #333;
+}
+
+.footer a:hover {
+  color: #219121;
+}
+
+.footer-contact {
+  text-align: center;
+  margin-top: 12px;
+}
+
 
 
 /* * * * * * * * * */
@@ -593,3 +612,13 @@ Text Domain: kale-child
   background-color: #219121;
 }
 
+.favourite-of img {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  height: 60px;
+}
+
+.favourite-of img:not(:last-of-type) {
+  margin-right: 30px;
+}
