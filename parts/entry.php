@@ -57,9 +57,23 @@ if(!isset($kale_frontpage_large_post)) $kale_frontpage_large_post = 'no';
                                   </g></g></g></g></g>
               </svg>
               <span class="difficulty-level__text"><?php echo get_field('difficulty_level'); ?></span>
+              <span class="favourite-of">
+                <?php
+                if (get_field('favourite_of') != '') {
+                  $favourite = get_field('favourite_of'); 
+                    foreach($favourite as $value) {
+                      if ($value == "Jacek") { ?>
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/prize_jacek.png" alt="Niebieska ikona nagrody" title="Jacek uwielbia">
+                        <?php } else if ($value == "Aga") {
+                        ?> <img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/prize_aga.png" alt="Czerwona ikona nagrody" title="Aga uwielbia">
+                     <?php }
+                    } 
+                } ?>
+              </span>
             </span>
           <?php } ?>
         </div>
+
         
         <?php if(get_the_title() != '') { ?>
         <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
@@ -99,6 +113,5 @@ if(!isset($kale_frontpage_large_post)) $kale_frontpage_large_post = 'no';
             ?>
         </div>
         <?php } ?>
-        
     </div>
-</div>
+  </div>
