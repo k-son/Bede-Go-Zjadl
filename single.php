@@ -74,7 +74,20 @@ $kale_posts_posts_nav_show = kale_get_option('kale_posts_posts_nav_show');
             <?php if($title == '') { ?>
             <h1 class="entry-title"><?php esc_html_e('Post ID: ', 'kale'); the_ID(); ?></h1>
             <?php } else { ?>
-            <h1 class="entry-title"><?php the_title(); ?></h1>
+            <h1 class="entry-title"><?php the_title(); ?>
+                <span class="entry-title__prizes">
+                <?php if (get_field('favourite_of') != '') {
+                  $favourite = get_field('favourite_of'); 
+                    foreach($favourite as $value) {
+                      if ($value == "Jacek") { ?>
+                        <img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/prize_jacek.png" alt="Niebieska ikona nagrody" title="Jacek uwielbia">
+                        <?php } else if ($value == "Aga") {
+                        ?> <img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/prize_aga.png" alt="Czerwona ikona nagrody" title="Aga uwielbia">
+                     <?php }
+                    } 
+                } ?>
+                </span>
+            </h1>
             <?php } ?>
 
 

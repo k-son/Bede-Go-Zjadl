@@ -26,10 +26,12 @@ Text Domain: kale-child
 
   *** Homepage ***
   * Random links
+  * Awards
 
   *** Single post page ***
   * Date
   * Title
+  * Awards
   * Single post text
   * Ingredients list
   * Meta: author, categories, tags
@@ -425,6 +427,19 @@ Text Domain: kale-child
 }
 
 
+/* AWARDS */
+
+.favourite-of img {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  height: 60px;
+}
+
+.favourite-of img:not(:last-of-type) {
+  margin-right: 30px;
+}
+
 
 /* * * * * * * * * * * * * */
 /*  - SINGLE POST PAGE -  */
@@ -453,6 +468,21 @@ Text Domain: kale-child
 
  h1.entry-title {
   margin-left: 15px;
+}
+
+
+/* AWARDS */
+
+.entry-title__prizes {
+  margin-left: 25px;
+}
+
+.entry-title__prizes img {
+  height: 60px;
+}
+
+.entry-title__prizes img:not(:last-of-type) {
+  margin-right: -25px;
 }
 
 
@@ -612,13 +642,3 @@ Text Domain: kale-child
   background-color: #219121;
 }
 
-.favourite-of img {
-  position: absolute;
-  top: -7px;
-  right: 0;
-  height: 60px;
-}
-
-.favourite-of img:not(:last-of-type) {
-  margin-right: 30px;
-}
