@@ -26,8 +26,12 @@
             
             <div class="footer-copyright">
                 <ul class="credit">
-                    <li><a href="https://www.lyrathemes.com/kale/"><?php esc_html_e('Kale', 'kale'); ?></a> <?php esc_html_e('by LyraThemes.com', 'kale'); ?></a> customized by <a href="https://k-son.eu">K-SON</a>.</li>
+                    <li><a href="https://www.lyrathemes.com/kale/"><?php esc_html_e('Kale', 'kale'); ?></a> <?php esc_html_e('by LyraThemes.com', 'kale'); ?></a> zmodyfikowany przez <a href="https://k-son.eu" target="_blank">K-SON</a>.</li>
                 </ul>
+            </div>
+
+            <div class="footer-contact">
+                Kontakt: <a href="https://k-son.eu" target="_blank">K-SON</a>
             </div>
             
         </div>
