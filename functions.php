@@ -50,3 +50,35 @@ function kale_get_nav_search_item() {
       </div>
   </li>';
 }
+
+
+/* New Taxonomy - favourite dish */
+
+function custom_taxonomy_ulubione_dania() {
+	// Add Class taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Ulubione_danie', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Ulubione danie', 'taxonomy singular name' ),
+		'search_items'      => __( 'Szukaj Ulubionych dań' ),
+		'all_items'         => __( 'Wszystkie Ulubione dania' ),
+		'parent_item'       => __( 'Ulubione danie - kat. nadrzędna' ),
+		'parent_item_colon' => __( 'Ulubione danie - kat. nadrzędna:' ),
+		'edit_item'         => __( 'Edytuj Ulubione danie' ),
+		'update_item'       => __( 'Zaktualizuj Ulubione danie' ),
+		'add_new_item'      => __( 'Dodaj nowe Ulubione danie' ),
+		'new_item_name'     => __( 'Nowa nazwa Ulubione danie' ),
+		'menu_name'         => __( 'Ulubione danie' ),
+	);
+
+    register_taxonomy( 'ulubione_danie', array('post'), array(
+        'show_in_rest' => true,
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'ulubione_danie' ),
+	));
+}
+
+add_action( 'init', 'custom_taxonomy_ulubione_dania', 0 );
