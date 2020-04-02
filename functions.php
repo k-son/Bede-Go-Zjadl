@@ -71,7 +71,7 @@ function custom_taxonomy_ulubione_dania() {
 	);
 
     register_taxonomy( 'ulubione_danie', array('post'), array(
-        'show_in_rest' => true,
+        'show_in_rest'      => true,
 		'hierarchical'      => true,
 		'labels'            => $labels,
 		'show_ui'           => true,
