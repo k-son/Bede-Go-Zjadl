@@ -430,16 +430,21 @@ Text Domain: kale-child
 
 /* AWARDS */
 
-.favourite-of img {
+
+.favourite-of a {
   position: absolute;
   top: -7px;
-  right: 0;
+  right: 0px;
+}
+
+.favourite-of a:not(:last-of-type) {
+  margin-right: 40px;
+}
+
+.favourite-of a img {
   height: 60px;
 }
 
-.favourite-of img:not(:last-of-type) {
-  margin-right: 30px;
-}
 
 
 /* * * * * * * * * * * * * */

@@ -57,9 +57,21 @@ if(!isset($kale_frontpage_large_post)) $kale_frontpage_large_post = 'no';
                                   </g></g></g></g></g>
               </svg>
               <span class="difficulty-level__text"><?php echo get_field('difficulty_level'); ?></span>
+              <span class="favourite-of">
+              <?php
+                  $postterms = wp_get_post_terms( $post->ID, 'ulubione_danie', array('fields' => 'names'));
+                  if (in_array("Jacek", $postterms)) { ?>
+                      <a href="<?php home_url();?>/ulubione_danie/jacek/"><img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/prize_jacek.png" alt="Niebieska ikona nagrody" title="Jacek uwielbia"></a>
+                  <?php } 
+                  if (in_array("Aga", $postterms)) { ?>
+                      <a href="<?php home_url();?>/ulubione_danie/aga/"><img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/prize_aga.png" alt="Czerwona ikona nagrody" title="Aga uwielbia"></a>
+                  <?php } 
+              ?>
+              </span>
             </span>
           <?php } ?>
         </div>
+
         
         <?php if(get_the_title() != '') { ?>
         <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
@@ -99,6 +111,5 @@ if(!isset($kale_frontpage_large_post)) $kale_frontpage_large_post = 'no';
             ?>
         </div>
         <?php } ?>
-        
     </div>
-</div>
+  </div>
