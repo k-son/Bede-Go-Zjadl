@@ -58,7 +58,7 @@ function custom_taxonomy_ulubione_dania() {
 	// Add Class taxonomy, make it hierarchical (like categories)
 	$labels = array(
 		'name'              => _x( 'Ulubione_danie', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Ulubione danie', 'taxonomy singular name' ),
+		'singular_name'     => _x( 'Ulubione dania', 'taxonomy singular name' ),
 		'search_items'      => __( 'Szukaj Ulubionych dań' ),
 		'all_items'         => __( 'Wszystkie Ulubione dania' ),
 		'parent_item'       => __( 'Ulubione danie - kat. nadrzędna' ),
