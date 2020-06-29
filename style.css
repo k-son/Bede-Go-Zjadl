@@ -48,6 +48,12 @@ Text Domain: kale-child
 
 
 /* HEADER */
+.header {
+
+  @media only screen and (max-width: 767px) {
+    padding-top: 20px;
+  }
+}
 
 .header .tagline p {
   font-size: 24px;
