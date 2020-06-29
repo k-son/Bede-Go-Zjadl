@@ -48,11 +48,11 @@ Text Domain: kale-child
 
 
 /* HEADER */
-.header {
 
-  @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+  .header {
     padding-top: 20px;
-  }
+  }  
 }
 
 .header .tagline p {
